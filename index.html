@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/">
-    <link rel="stylesheet" href="assets/css/reset.local.css" />
-    <link rel="stylesheet" href="assets/css/normalize.css" />
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./app.css">
     <script src="https://use.fontawesome.com/ac98c10a99.js"></script>
@@ -142,6 +140,13 @@
           </div>
         </div>
       </footer>
+      <div id="img-modal" class="imgModal absolute top-0 w-full h-full">
+          <img
+            src="https://source.unsplash.com/200x200/?healthy-food.jpg"
+            alt="avatar"
+            class="w-full flex items-center justify-center"
+          />
+      </div>
       <div id="myModal" class="modal absolute top-0 w-full h-full">
         <div class="flex flex-col">
           <div class="flex h-20 rounded-t-lg">
@@ -161,6 +166,7 @@
               <img
                 src="https://source.unsplash.com/200x200/?healthy-food.jpg"
                 alt="avatar"
+                id="myImg"
                 class="w-16 h-16 rounded-md mr-4 cursor-pointer"
               />
               <div class="flex flex-col">
