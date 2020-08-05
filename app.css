@@ -1,99 +1,129 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 body {
   width: 350px;
   margin: 15px auto;
-  font-family: "PT Serif", serif;
+  font-family: 'PT Serif', serif;
 }
 
 .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .nav--avatar > img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
 }
 
 .font-small {
-    font-size: small;
+  font-size: small;
 }
 
-.card-height{
-    height:50px ;
+.card-height {
+  height: 50px;
 }
 
 .icon-phone {
-    background: rgba(190, 164, 255, 0.7);
+  background: rgba(190, 164, 255, 0.7);
 }
 
-  
 .icon-play {
-    background: rgba(255, 146, 101, 0.7);
+  background: rgba(255, 146, 101, 0.7);
 }
 
 .text-orange-cu {
-    color: rgba(255, 146, 101, 0.7);;
+  color: rgba(255, 146, 101, 0.7);
 }
 
-.bg-green-50{
-    background-color: rgba(198,246,213, 0.09);
+.bg-green-50 {
+  background-color: rgba(198, 246, 213, 0.09);
 }
 
 .border-w-1 {
-    border-width: 1px;
+  border-width: 1px;
 }
-.i-phone, .i-play {
-    width: 35px;
+.i-phone,
+.i-play {
+  width: 35px;
   height: 35px;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /* The Modal (background) */
 .modal {
-    display: none;
-    /* position: absolute; */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none;
+  /* position: absolute; */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  transform: scaleY(0);
+  animation: showModal 0.5s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+@keyframes showModal {
+  from {
+    transform: scaleY(0);
+    z-index: 0;
   }
-
+  to {
+    transform: scaleY(1);
+    z-index: 1;
+    /* transform-origin: left bottom; */
+  }
+}
 .imgModal {
-    display: none;
-    /* position: absolute; */
-    z-index: 14; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none;
+  /* position: absolute; */
+  z-index: 0; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  transform: scaleY(0);
+  animation: showImgModal 0.25s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showImgModal {
+  from {
+    transform: scaleY(0);
+    z-index: 0;
   }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  to {
+    transform: scaleY(1);
+    z-index: 14;
+    /* transform-origin: left bottom; */
   }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
